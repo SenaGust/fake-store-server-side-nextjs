@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --purple-base: #7a31d8;
+  --purple-dark: #5908c4;
+
+  --blue-light: #d7ddf9;
+  --blue-base: #5e79fd;
+  --blue-dark: #425ad3;
+
+  --white: #ffffff;
+  --background: #f6f5f7;
+  --shape: #ede9f2;
+
+  --gray-100: #adadad;
+  --gray-200: #949494;
+  --gray-300: #666666;
+  --gray-400: #3d3d3d;
+  --gray-500: #1d1d1d;
+
+  --danger: #dc3545;
+  --success: #28a745;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font line heights */
+  --font-line-height-regular: 120%;
+  --font-line-height-medium: 140%;
+
+  /* Font sizes */
+  --font-size-xs: 0.625rem; /* 10px */
+  --font-size-sm: 0.75rem; /* 12px */
+  --font-size-md: 0.875rem; /* 14px */
+  --font-size-lg: 1rem; /* 16px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-*: initial;
+  --color-purple-base: var(--purple-base);
+  --color-purple-dark: var(--purple-dark);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-blue-light: var(--blue-light);
+  --color-blue-base: var(--blue-base);
+  --color-blue-dark: var(--blue-dark);
+
+  --color-white: var(--white);
+  --color-background: var(--background);
+  --color-shape: var(--shape);
+
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+
+  --text-*: initial;
+
+  --text-title-lg: var(--font-size-2xl);
+  --text-title-lg--line-height: var(--font-line-height-regular);
+  --text-title-lg--font-weight: var(--font-weight-bold);
+
+  --text-title-md: var(--font-size-xl);
+  --text-title-md--line-height: var(--font-line-height-regular);
+  --text-title-md--font-weight: var(--font-weight-bold);
+
+  --text-title-sm: var(--font-size-lg);
+  --text-title-sm--line-height: var(--font-line-height-regular);
+  --text-title-sm--font-weight: var(--font-weight-bold);
+
+  --text-title-xs: var(--font-size-md);
+  --text-title-xs--line-height: var(--font-line-height-regular);
+  --text-title-xs--font-weight: var(--font-weight-bold);
+
+  --text-body-md: var(--font-size-lg);
+  --text-body-md--line-height: var(--font-line-height-medium);
+  --text-body-md--font-weight: var(--font-weight-regular);
+
+  --text-body-sm: var(--font-size-md);
+  --text-body-sm--line-height: var(--font-line-height-medium);
+  --text-body-sm--font-weight: var(--font-weight-regular);
+
+  --text-body-xs: var(--font-size-sm);
+  --text-body-xs--line-height: var(--font-line-height-medium);
+  --text-body-xs--font-weight: var(--font-weight-regular);
+
+  --text-label-md: var(--font-size-sm);
+  --text-label-md--line-height: var(--font-line-height-regular);
+  --text-label-md--font-weight: var(--font-weight-medium);
+
+  --text-label-sm: var(--font-size-xs);
+  --text-label-sm--line-height: var(--font-line-height-regular);
+  --text-label-sm--font-weight: var(--font-weight-medium);
+
+  --text-action-md: var(--font-size-lg);
+  --text-action-md--line-height: var(--font-line-height-regular);
+  --text-action-md--font-weight: var(--font-weight-medium);
+
+  --text-action-sm: var(--font-size-md);
+  --text-action-sm--line-height: var(--font-line-height-regular);
+  --text-action-sm--font-weight: var(--font-weight-medium);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
 }
