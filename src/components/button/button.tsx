@@ -10,7 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const buttonStyles = tv({
   base: twMerge(
-    "rounded-lg px-4 flex items-center gap-2",
+    "rounded-lg px-4 flex items-center gap-2 justify-center",
     "cursor-pointer select-none",
     "[&_svg]:size-6",
     "active:shadow-md",
