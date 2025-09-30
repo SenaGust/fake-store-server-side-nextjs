@@ -23,8 +23,8 @@
   --success: #28a745;
 
   /* Font weights */
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
+  --font-weight-regular: 300;
+  --font-weight-medium: 400;
   --font-weight-bold: 700;
 
   /* Font line heights */
@@ -111,5 +111,5 @@
 
 body {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
 }
