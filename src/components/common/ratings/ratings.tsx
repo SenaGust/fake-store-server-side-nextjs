@@ -35,7 +35,7 @@ export function Ratings({
   const title = rating > 0 ? `NOTA • ${rating}/${maxRating}` : "NOTA";
 
   return (
-    <fieldset className={twMerge("flex flex-col align-start gap-2", className)}>
+    <div className={twMerge("flex flex-col align-start gap-3", className)}>
       <legend className="text-body-md text-gray-300">{title}</legend>
 
       <div className={twMerge("flex items-center gap-1")}>
@@ -65,6 +65,6 @@ export function Ratings({
           );
         })}
       </div>
-    </fieldset>
+    </div>
   );
 }
