@@ -11,7 +11,7 @@ export default function Home() {
 
       <h2 className="text-xl mb-1">Ratings</h2>
 
-      <Ratings rating={0} />
+      <Ratings rating={3} readOnly />
 
       <Ratings rating={3} />
 
