@@ -3,6 +3,7 @@ import { Checkbox } from "@/components/common/checkbox";
 import { Link } from "@/components/common/link";
 import { Ratings } from "@/components/common/ratings";
 import { TextInput } from "@/components/common/text-input";
+import { Product } from "@/components/product";
 import { Letter, Eye } from "@solar-icons/react/ssr";
 
 export default function Home() {
@@ -74,6 +75,17 @@ export default function Home() {
         Placeholder
         <Letter />
       </Link>
+
+      <h2 className="text-xl mb-1">Product</h2>
+
+      <div className="bg-gray-300 p-4">
+        <Product
+          title="Sofá"
+          rating={4.5}
+          price={100}
+          image="https://picsum.photos/148/96"
+        />
+      </div>
     </div>
   );
 }
