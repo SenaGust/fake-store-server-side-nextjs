@@ -3,10 +3,12 @@ import { getAccessToken } from "@/services/auth/get-access-token";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function POST(request: Request) {
+  const { username, password } = await request.json();
+
   const response = await getAccessToken({
-    username: "emilys",
-    password: "emilyspass",
+    username,
+    password,
   });
 
   console.log({ response });
