@@ -1,16 +1,17 @@
+import { ROUTES } from "@/app/routes";
 import { Button } from "@/components/common/button";
 import { TextInput } from "@/components/common/text-input";
 import { PasswordInput } from "@/components/password-input/password-input";
 import {
   ArrowRight,
-  Eye,
   KeyMinimalisticSquare2,
   Letter,
 } from "@solar-icons/react/ssr";
 import Image from "next/image";
+import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-export default function Login() {
+export default function SignIn() {
   return (
     <div
       className={twMerge(
@@ -56,11 +57,18 @@ export default function Login() {
       </main>
 
       <section className="row-end-0 flex flex-col gap-5">
-        <h2>Ainda não tem uma conta?</h2>
-        <Button size="md" variant="outline" className="w-full justify-between">
-          Cadastrar
-          <ArrowRight />
-        </Button>
+        <h2 className="text-body-md text-gray-300">Ainda não tem uma conta?</h2>
+
+        <Link href={ROUTES.signUp}>
+          <Button
+            size="md"
+            variant="outline"
+            className="w-full justify-between"
+          >
+            Cadastrar
+            <ArrowRight />
+          </Button>
+        </Link>
       </section>
     </div>
   );

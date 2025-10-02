@@ -20,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} antialiased`}>{children}</body>
+      <body
+        className={`${lato.variable} antialiased flex min-h-screen flex-col overflow-auto`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
