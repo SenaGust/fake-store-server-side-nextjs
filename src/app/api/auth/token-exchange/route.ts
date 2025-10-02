@@ -3,12 +3,10 @@ import { getAccessToken } from "@/services/auth/get-access-token";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
-  const { username, password } = await request.json();
-
+export async function GET(request: Request) {
   const response = await getAccessToken({
-    username,
-    password,
+    username: "emilys",
+    password: "emilyspass",
   });
 
   console.log({ response });
@@ -26,5 +24,5 @@ export async function POST(request: Request) {
   cookieStore.set(COOKIE_NAMES.ACCESS_TOKEN, accessToken);
   cookieStore.set(COOKIE_NAMES.REFRESH_TOKEN, refreshToken);
 
-  return NextResponse.redirect("http://localhost:3000/design-system");
+  return NextResponse.redirect("http://localhost:3000/products");
 }
