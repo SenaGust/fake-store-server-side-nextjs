@@ -21,11 +21,11 @@ export function Product({
   return (
     <div
       className={twMerge(
-        "flex flex-col gap-1 p-1 rounded-lg bg-white h-full w-fit",
+        "flex flex-col gap-1 p-1 rounded-lg bg-white h-full w-full",
         className
       )}
     >
-      <div className="relative max-w-fit">
+      <div className="relative flex justify-center">
         <div className="absolute z-10 top-0 right-0 rounded-bl-lg bg-white p-1">
           <Ratings rating={rating} readOnly />
         </div>

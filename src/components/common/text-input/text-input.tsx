@@ -3,7 +3,7 @@ import { ComponentProps, ReactNode, useId } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface TextInputProps extends ComponentProps<"input"> {
-  label: string;
+  label?: string;
   containerClassName?: string;
   hasError?: boolean;
   helperText?: string;
@@ -34,14 +34,16 @@ export function TextInput({
 
   return (
     <label className={twMerge("group flex flex-col gap-0", containerClassName)}>
-      <span
-        className={twMerge(
-          "text-label-md text-gray-400 uppercase",
-          "group-focus-within:text-purple-base"
-        )}
-      >
-        {label}
-      </span>
+      {label && (
+        <span
+          className={twMerge(
+            "text-label-md text-gray-400 uppercase",
+            "group-focus-within:text-purple-base"
+          )}
+        >
+          {label}
+        </span>
+      )}
 
       <div className="relative">
         {hasLeftIcon && (
