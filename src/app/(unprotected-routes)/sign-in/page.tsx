@@ -1,12 +1,7 @@
 import { ROUTES } from "@/app/routes";
 import { Button } from "@/components/common/button";
-import { TextInput } from "@/components/common/text-input";
-import { PasswordInput } from "@/components/password-input/password-input";
-import {
-  ArrowRight,
-  KeyMinimalisticSquare2,
-  Letter,
-} from "@solar-icons/react/ssr";
+import { SignInForm } from "@/components/pages/sign-in/sign-in-form";
+import { ArrowRight } from "@solar-icons/react/ssr";
 import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
@@ -28,32 +23,7 @@ export default function SignIn() {
       </header>
 
       <main>
-        <form>
-          <TextInput
-            label="E-mail"
-            type="text"
-            placeholder="mail@exemplo.br"
-            leftIcon={<Letter />}
-            containerClassName="mb-5"
-          />
-
-          <PasswordInput
-            label="Senha"
-            placeholder="Sua senha"
-            leftIcon={<KeyMinimalisticSquare2 />}
-            containerClassName="mb-10"
-          />
-
-          <Button
-            type="submit"
-            variant="solid"
-            size="md"
-            className="w-full justify-between"
-          >
-            Login
-            <ArrowRight />
-          </Button>
-        </form>
+        <SignInForm />
       </main>
 
       <section className="row-end-0 flex flex-col gap-5">
