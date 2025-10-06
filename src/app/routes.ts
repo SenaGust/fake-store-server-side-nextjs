@@ -5,4 +5,5 @@ export const ROUTES = {
   orders: "/orders",
   cart: "/cart",
   profile: "/profile",
+  logout: "/api/auth/logout",
 } as const;
